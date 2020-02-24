@@ -13,6 +13,7 @@ from keras.models import load_model
 import imutils
 import pickle
 import config
+from preprocessing import preprocess
 
 modell = config.model
 
@@ -65,9 +66,7 @@ def main():
             try:
                 fjes = lager[startY:endY, startX:endX]
                 fjes = cv2.resize(fjes, (100, 120))
-                fjes = cv2.cvtColor(fjes, cv2.COLOR_BGR2GRAY)
-                fjes = fjes - fjes.mean() + 125
-                fjes = cv2.resize(fjes, (config.model_img_dims[1], config.model_img_dims[0]))
+                fjes = preprocess(fjes)
                 fjes = fjes.astype("float") / 255.0
                 fjes = img_to_array(fjes)
                 fjes = np.expand_dims(fjes, axis=0)
