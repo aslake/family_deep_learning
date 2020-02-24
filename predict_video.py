@@ -12,8 +12,9 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 import imutils
 import pickle
+import config
 
-modell = "einbufjes"
+modell = config.model
 
 print("Laster modeller...")
 
@@ -24,7 +25,7 @@ net = cv2.dnn.readNetFromCaffe("model/face_detect/deploy.prototxt.txt",
 # Model for face recognition
 model = load_model(f'model/this/{modell}')
 lb = pickle.loads(open(f'model/this/{modell}_labelbin', "rb").read())
-
+print(f'Bruker modell: {modell}')
 
 def main():
     """
@@ -66,7 +67,7 @@ def main():
                 fjes = cv2.resize(fjes, (100, 120))
                 fjes = cv2.cvtColor(fjes, cv2.COLOR_BGR2GRAY)
                 fjes = fjes - fjes.mean() + 125
-                fjes = cv2.resize(fjes, (96, 96))
+                fjes = cv2.resize(fjes, (config.model_img_dims[1], config.model_img_dims[0]))
                 fjes = fjes.astype("float") / 255.0
                 fjes = img_to_array(fjes)
                 fjes = np.expand_dims(fjes, axis=0)

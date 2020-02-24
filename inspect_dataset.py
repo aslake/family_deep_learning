@@ -9,13 +9,14 @@ Author: Aslak Einbu February 2020.
 import numpy as np
 import cv2
 import os
+import config
 
 
 for person in os.listdir("training_dataset"):
     directory = f'/home/aslei/Documents/fjeslearn/training_dataset/{person}'
 
-    tile_width = 50
-    tile_height = 50
+    tile_width = config.model_img_dims[1]
+    tile_height = config.model_img_dims[0]
     filer = os.listdir(directory)
     antall = len(filer)
     row_tiles = col_tiles = int(np.sqrt(antall))
