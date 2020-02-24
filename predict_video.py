@@ -65,6 +65,7 @@ def main():
                 fjes = lager[startY:endY, startX:endX]
                 fjes = cv2.resize(fjes, (100, 120))
                 fjes = cv2.cvtColor(fjes, cv2.COLOR_BGR2GRAY)
+                fjes = fjes - fjes.mean() + 125
                 fjes = cv2.resize(fjes, (96, 96))
                 fjes = fjes.astype("float") / 255.0
                 fjes = img_to_array(fjes)
