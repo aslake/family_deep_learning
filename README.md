@@ -46,13 +46,16 @@ The architectures uses 3×3 convolutional layers stacked on top of each other in
 reducing volume size by max pooling and with fully-connected layers at the end of the network prior to 
 a softmax classifier.
 
+### Dataset preprocessing
+The only image preprocessing applied, is rescaling to 96 x 96 pixel resolution, converting to grayscale 
+and normalizing grayscale values:
+
+![alt text](./readme_images/dataset.png "One class for training")
+
 ### Model training
 The current framework applies a separate neural net model for detection of faces in the pictures of a webcam video stream. 
 These captured frames of faces are applied for collection of training images. The same algorithm is applied for determining 
 faces for prediction during application of the trained model.
-
-The only image preprocessing applied, is rescaling to 96 x 96 pixel resolution, converting to grayscale 
-and normalizing grayscale values.
 
 The figure below shows results from training of the above described convolutional neural net on a set of family member images.
 The current model was trained on a total of 1118 images of 6 different family individuals (classes). 
