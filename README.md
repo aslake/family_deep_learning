@@ -39,7 +39,7 @@ Repository file structure:
 ```
 
 ### Neural network
-The applied network is a convolutional neural network setup by Adrian Rosebroch. The network is a
+The applied network is a convolutional neural network setup by Adrian Rosebrock. The network is a
 compact variant of the VGGNet network, introduced by Simonyan and Zisserman in their 2014 paper, 
 [Very Deep Convolutional Networks for Large Scale Image Recognition](https://arxiv.org/abs/1409.1556).
 The architectures uses 3×3 convolutional layers stacked on top of each other in increasing depth,
@@ -61,7 +61,7 @@ Total size of training image dataset was only 4.9 MB :)
 200 epochs of training with the network took 43 minutes on my Dell laptop.
 The resulting model size was ~100 MB. The resulting model predicts individual faces well for real-time video stream processing.
 
-An interesting feature, it the ability the model gives for predicting percentage similarities between different family members :)
+An interesting feature is the ability the model gives for predicting percentage similarities between different family members :)
 
 
 ![alt text](./readme_images/tensorboard_scalars.png "Neural net training")
