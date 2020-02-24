@@ -18,8 +18,8 @@ Repository file structure:
 ├── network.py   	    # Deep learning convolutional neural network model
 ├── config.py               # Config file for global framework settings 
 ├── collect_faces.py        # Script for collecting face images for model training 
-├── inspect_dataset.py      # Script for overview and inspection of image training sets 
-├── train.py                # Script for training of neural net on images in 'treningssett'  
+├── inspect_dataset.py      # Script for overview and inspection of images in folder 'training_dataset'
+├── train.py                # Script for training of neural net on images in folder 'training_dataset'  
 ├── train_history.py        # Function for plotting of model training
 ├── predict_folder.py       # Script for testing predictions on images in a given directory
 ├── predict_video.py        # Script for real-time video stream processing and face recognition using trained models
