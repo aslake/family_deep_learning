@@ -32,8 +32,6 @@ for person in os.listdir("training_dataset"):
         tile = cv2.resize(tile, (tile_width, tile_height))
         tile_grey = cv2.cvtColor(tile, cv2.COLOR_BGR2GRAY)
         tile_grey_norm = (tile_grey - tile_grey.mean())+ 125
-        tile_grey_norm = cv2.threshold(tile_grey_norm,125, 255, cv2.THRESH_BINARY)[1]
-
 
         tiles[tile_height*row:tile_height+tile_height*row, tile_width * col:tile_width+tile_width*col] = tile
         tiles_grey[tile_height * row:tile_height + tile_height * row, tile_width * col:tile_width + tile_width * col] = tile_grey
