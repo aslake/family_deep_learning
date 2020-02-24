@@ -34,6 +34,7 @@ for filename in os.listdir(directory):
 
         # pre-process the image for classification
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        image = image - image.mean() + 125
         image = cv2.resize(image, (96, 96))
         image = image.astype("float") / 255.0
         image = img_to_array(image)
