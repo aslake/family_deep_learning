@@ -74,7 +74,7 @@ An interesting feature, it the ability the model gives for predicting percentage
 
 
 ### Credits and inspiration
-- Adrian Rosebrock's webpages on OpenCV and Deep Learning https://www.pyimagesearch.com
+- Adrian Rosebrock's webpages on OpenCV https://www.pyimagesearch.com
 - VGG - Visual Geometry Group at Oxford http://www.robots.ox.ac.uk/~vgg/
 
 
