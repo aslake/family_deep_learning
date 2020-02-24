@@ -39,7 +39,7 @@ random.shuffle(imagePaths)
 for imagePath in imagePaths:
     image = cv2.imread(imagePath)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    image = image -image.mean() +125
+    image = image -image.mean() + 125
     image = cv2.resize(image, (IMAGE_DIMS[1], IMAGE_DIMS[0]))
     image = img_to_array(image)
     data.append(image)
