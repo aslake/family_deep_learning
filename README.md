@@ -20,10 +20,10 @@ Repository file structure:
 ├── collect_faces.py        # Script for collecting face images for model training 
 ├── inspect_dataset.py      # Script for overview and inspection of image training sets 
 ├── preprocessing.py        # Function for preprocessing of images for training/prediction  
-├── train.py                # Script for training of neural net on images in 'treningssett'  
+├── train.py                # Script for training of neural net on images in folder 'training_dataset'  
 ├── train_history.py        # Function for plotting of model training
 ├── predict_folder.py       # Script for testing predictions on images in a given directory
-├── predict_video.py        # Script for real-time video stream processing and face recognition using trained models
+├── predict_video.py        # Script for video stream face recognition using trained model 
 │
 ├── model                   # Neural net models applied
 │   ├── face_detect         # CNN for face detection
